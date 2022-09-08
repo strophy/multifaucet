@@ -49,7 +49,7 @@ $vars['status'] = $status;
 $show_form = faucet_eval_status($status, $vars, $LANGUAGE, $SETTINGS);
 if ($show_form){
 	// Render Captcha
-	$vars['captcha'] = faucet_get_captcha($SETTINGS);
+	$vars['captcha'] = echo($SETTINGS); // faucet_get_captcha($SETTINGS);
 	// Render Form
 	$vars['content'] = render_template(faucet_get_content('form'), $vars); 
 }
